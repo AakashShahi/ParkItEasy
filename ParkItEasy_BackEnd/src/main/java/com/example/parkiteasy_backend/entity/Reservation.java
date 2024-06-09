@@ -12,8 +12,8 @@ import java.sql.Time;
 @Setter
 public class Reservation {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "reservation_sequence")
-    @SequenceGenerator(name = "reservation_sequence", sequenceName = "reservation_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "reservation_sequence_gen")
+    @SequenceGenerator(name = "reservation_sequence_gen", sequenceName = "reservation_sequence", allocationSize = 1)
     @Column(name = "reservation_id", length = 10)
     private Integer reservationId;
 
@@ -34,5 +34,14 @@ public class Reservation {
 
     @Column(name = "vehicle_type", length = 15)
     private String vehicleType;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "customer_vehicle_no", referencedColumnName = "vehicle_no",
+            foreignKey = @ForeignKey(name="fk_reservation_customer"))
+    private Customer customer;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "lot_id", foreignKey = @ForeignKey(name = "fk_reservation_parking_lot"))
+    private ParkingLot parkingLot;
 
 }
