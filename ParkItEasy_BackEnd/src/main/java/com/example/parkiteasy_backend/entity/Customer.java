@@ -13,8 +13,7 @@ import lombok.Setter;
 @Setter
 public class Customer{
     @Id
-    @Column(name = "vehicle_no", length = 10)
-    private Integer vehicleNumber;
+    private Integer id;
 
     @Column(name = "full_name", length = 50)
     private String fullName;

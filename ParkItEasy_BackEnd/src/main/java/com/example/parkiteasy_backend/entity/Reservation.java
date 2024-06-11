@@ -14,8 +14,7 @@ public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "reservation_sequence_gen")
     @SequenceGenerator(name = "reservation_sequence_gen", sequenceName = "reservation_sequence", allocationSize = 1)
-    @Column(name = "reservation_id", length = 10)
-    private Integer reservationId;
+    private Integer id;
 
     @Column(name = "start_date")
     private Date startDate;
@@ -36,12 +35,12 @@ public class Reservation {
     private String vehicleType;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "customer_vehicle_no", referencedColumnName = "vehicle_no",
+    @JoinColumn(name = "customer_vehicle_no", referencedColumnName = "id",
             foreignKey = @ForeignKey(name="fk_reservation_customer"))
     private Customer customer;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "lot_id", foreignKey = @ForeignKey(name = "fk_reservation_parking_lot"))
+    @JoinColumn(name = "lot_id",  referencedColumnName = "id",foreignKey = @ForeignKey(name = "fk_reservation_parking_lot"))
     private ParkingLot parkingLot;
 
 }

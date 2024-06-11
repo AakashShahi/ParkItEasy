@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "parking_lots")
 @Getter
@@ -12,8 +14,7 @@ public class ParkingLot {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "lot_id_generator")
     @SequenceGenerator(name="lot_id_generator", sequenceName = "parking_lot_seq", allocationSize=1)
-    @Column(name = "lot_id", length = 10)
-    private Integer lotId;
+    private Integer id;
 
     @Column(name = "lot_name", length = 50)
     private String lotName;
@@ -22,16 +23,16 @@ public class ParkingLot {
     private Integer capacity;
 
     @Column(name = "price", precision = 10, scale = 2)
-    private Float price;
+    private BigDecimal price;
 
     @Column(name = "status", length = 20)
     private String status;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "owner_id", foreignKey = @ForeignKey(name = "fk_parking_lot_owner"))
+    @JoinColumn(name = "owner_id", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_parking_lot_owner"))
     private ParkingLotOwner owner;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "address_id", foreignKey = @ForeignKey(name = "fk_parking_lot_address"))
+    @JoinColumn(name = "address_id", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_parking_lot_address"))
     private Address address;
 }
