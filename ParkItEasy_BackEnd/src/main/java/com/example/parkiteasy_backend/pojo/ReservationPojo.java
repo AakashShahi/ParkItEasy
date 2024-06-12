@@ -14,13 +14,13 @@ import java.sql.Time;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ReservationPojo {
-    private int reservationId;
+    private Long reservationId;
     private Date startDate;
     private Date endDate;
     private Time startTime;
     private Time endTime;
     private String reservationStatus;
     private String vehicleType;
-    private int parkingLotId;
-    private int customerId;
+    private Long parkingLotId;
+    private Long customerId;
 }

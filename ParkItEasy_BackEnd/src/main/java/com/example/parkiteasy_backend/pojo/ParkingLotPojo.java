@@ -12,12 +12,12 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ParkingLotPojo {
-    private int id;
+    private Long id;
     private String lotName;
     private int capacity;
     private BigDecimal price;
     private String status;
-    private int ownerId;
-    private int addressId;
+    private Long ownerId;
+    private Long addressId;
 
 }

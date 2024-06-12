@@ -10,9 +10,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AddressPojo {
-    private int id;
+    private Long id;
     private String street;
     private String city;
     private String state;
-    private String zip;
+    private int zip;
 }

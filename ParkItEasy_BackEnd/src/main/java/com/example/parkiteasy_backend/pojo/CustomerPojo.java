@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CustomerPojo {
-    private int id;
+    private Long id;
     private String fullName;
     private String email;
     private String password;

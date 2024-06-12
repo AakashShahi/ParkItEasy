@@ -15,7 +15,7 @@ public class Receipt {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "invoice_id_generator")
     @SequenceGenerator(name="invoice_id_generator", sequenceName = "receipt_seq", allocationSize=1)
-    private Integer invoiceId;
+    private Long invoiceId;
 
     @Column(name = "amount", precision = 10, scale = 2)
     private BigDecimal amount;

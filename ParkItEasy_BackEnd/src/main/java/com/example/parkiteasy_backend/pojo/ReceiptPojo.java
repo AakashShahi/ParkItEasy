@@ -13,9 +13,9 @@ import java.sql.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ReceiptPojo {
-    private int invoiceId;
+    private Long invoiceId;
     private BigDecimal totalPrice;
     private Date date;
     private String paymentMethod;
-    private int reservationId;
+    private Long reservationId;
 }

@@ -10,10 +10,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ParkingLotOwnerPojo {
-    private int ownerId;
+    private Long ownerId;
     private String ownerName;
     private String ownerEmail;
     private String ownerPhone;
-    private String ownerPhn;
+    private String ownerPass;
 
 }

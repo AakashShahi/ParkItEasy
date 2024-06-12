@@ -14,7 +14,7 @@ public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "reservation_sequence_gen")
     @SequenceGenerator(name = "reservation_sequence_gen", sequenceName = "reservation_sequence", allocationSize = 1)
-    private Integer id;
+    private Long id;
 
     @Column(name = "start_date")
     private Date startDate;
