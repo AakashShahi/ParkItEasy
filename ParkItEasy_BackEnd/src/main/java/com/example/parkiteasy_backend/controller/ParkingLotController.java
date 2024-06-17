@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("parking-lot")
+@RequestMapping("/apiparking-lots")
 @RequiredArgsConstructor
 public class ParkingLotController {
 
