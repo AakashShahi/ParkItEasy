@@ -41,13 +41,13 @@ public class ParkingLotServiceImpl implements ParkingLotService {
     }
 
     @Override
-    public ParkingLot updateParkingLot(Long parkingLotId, ParkingLot parkingLot) {
+    public ParkingLot updateParkingLot(Long parkingLotId, ParkingLotPojo parkingLotPojo) {
        Optional<ParkingLot> parkinglot= parkingLotRepository.findById(parkingLotId);
        if (parkinglot.isPresent()) {
-           parkinglot.get().setLotName(parkingLot.getLotName());
-           parkinglot.get().setPrice(parkingLot.getPrice());
-           parkinglot.get().setStatus(parkingLot.getStatus());
-           parkinglot.get().setCapacity(parkingLot.getCapacity());
+           parkinglot.get().setLotName(parkingLotPojo.getLotName());
+           parkinglot.get().setPrice(parkingLotPojo.getPrice());
+           parkinglot.get().setStatus(parkingLotPojo.getStatus());
+           parkinglot.get().setCapacity(parkingLotPojo.getCapacity());
            parkingLotRepository.save(parkinglot.get());
            return parkinglot.get();
        }
