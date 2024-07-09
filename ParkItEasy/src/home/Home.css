@@ -131,6 +131,21 @@ body, html {
     background-repeat: no-repeat;
 }
 
+
+.serviceContainer {
+    margin-top: 50px;
+    padding: 10px;
+    width: 100vw; /* Ensure it takes full width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-image: url("/src/assets/thirdpage.png");
+    background-repeat: no-repeat;
+}
+
 @media (max-width: 768px) {
     .mainNav {
         flex-wrap: wrap; /* Allow wrapping of nav items */

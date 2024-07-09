@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import ReservationForm from './Reservation/Form.tsx';
 import './Home.css';
 import CustomerSignUp from "./CustomerRegistration/Form.tsx";
+import Service from "./OurSercive";
 
 function Home() {
+    const customerContainerRef = useRef(null);
+
+    const scrollToCustomerContainer = (event) => {
+        event.preventDefault();
+        customerContainerRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <>
             <header>
                 <div className="mainNav">
                     <div className="parkingLogo">
-                        <img className="myLogo" src="src/assets/parkingLogo.png" alt="parkingLogo"/>
+                        <img className="myLogo" src="src/assets/parkingLogo.png" alt="parkingLogo" />
                     </div>
 
                     <div className="navItems">
@@ -21,21 +29,24 @@ function Home() {
                     </div>
 
                     <div className="navLogSign">
-                        <img className="profileLogo" src="src/assets/profileLogo.png" alt="Profile Logo"/>
+                        <img className="profileLogo" src="src/assets/profileLogo.png" alt="Profile Logo" />
                         <a className="navLogIn" href="/login">Log In</a>
-                        <a className="navRegister" href="/register">Sign Up</a>
+                        <a className="navRegister" href="#register" onClick={scrollToCustomerContainer}>Sign Up</a>
                     </div>
                 </div>
             </header>
 
             <div className="reserveContainer">
-                <ReservationForm/>
+                <ReservationForm />
             </div>
 
-            <div className="customerContainer">
-                <CustomerSignUp/>
+            <div className="customerContainer" ref={customerContainerRef}>
+                <CustomerSignUp />
             </div>
-            
+
+            <div className="serviceContainer">
+                <Service />
+            </div>
         </>
     );
 }

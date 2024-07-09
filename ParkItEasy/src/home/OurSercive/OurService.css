@@ -1,0 +1,97 @@
+/* Import the preferred font */
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@400;700&display=swap');
+
+body, html {
+    font-family: 'Smooch Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1a1a1a;
+    color: white; /* Set default text color to white */
+    text-align: center;
+}
+
+/* Main background for the service section */
+.mainServBg {
+    padding: 40px 20px;
+    background-color: transparent;
+    text-align: center;
+}
+
+/* Semi-transparent background for the service cards */
+.semiServBg {
+    display: grid;
+    gap: 20px;
+}
+
+/* Responsive grid columns */
+@media (min-width: 768px) {
+    .semiServBg {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Common styles for service cards */
+.regCont, .parkingLotCon, .vehicleSecCont {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+/* Hover effect for service cards */
+.regCont:hover, .parkingLotCon:hover, .vehicleSecCont:hover {
+    transform: translateY(-10px);
+}
+
+/* Common styles for images in service cards */
+.regContImg, .parkingLotImg, .vehSecContImg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Common styles for service card content */
+.p-6 {
+    padding: 20px;
+    text-align: left;
+}
+
+/* Heading styles for service cards */
+.regHead, .parkingLotHead, .vehSecHead {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #F4D424;
+}
+
+/* Paragraph styles for service cards */
+.regPara, .parkingLotPara, .vehSecPara {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ddd; /* Lighter color for paragraphs */
+}
+
+/* Common styles for buttons in service cards */
+.regBtn, .parkingLotBtn, .vehSecBtn {
+    background-color: #F4D424;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.regBtn:hover, .parkingLotBtn:hover, .vehSecBtn:hover {
+    background-color: #e2c021;
+    color: #fff;
+}
+
+/* Service section heading */
+.headServ {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #F4D424;
+}
