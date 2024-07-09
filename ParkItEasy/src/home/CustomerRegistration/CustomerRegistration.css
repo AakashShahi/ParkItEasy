@@ -1,0 +1,126 @@
+/* Import the preferred font */
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@400;700&display=swap');
+
+body, html {
+    font-family: 'Smooch Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1a1a1a;
+    color: white; /* Set default text color to white */
+    text-align: center;
+}
+
+/* Background container */
+.registerBg {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Semi-transparent background for the form */
+.semiRegisterBg {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Heading styles */
+.customerHeading {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white; /* White color for customer heading */
+    text-align: center;
+}
+
+.registerHeading {
+    color: #F4D424; /* Yellow color for emphasis */
+    text-decoration: underline; /* Underline the registration heading */
+}
+
+/* Form styling */
+.registrationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* General input styling */
+.registrationForm input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid white; /* White border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: transparent; /* Transparent background */
+    color: white; /* White text color */
+    outline: none;
+}
+
+.registrationForm input::placeholder {
+    color: #999; /* Placeholder color */
+}
+
+/* Input field specific styles */
+.nameField, .emailField, .passField, .confirmPassField {
+    margin-bottom: 15px;
+}
+
+/* Container for phone and vehicle number fields */
+.phnvhContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.phoneField, .numberField {
+    width: calc(50% - 10px); /* Adjust width for both inputs */
+}
+
+/* Submit button */
+.submitContainer {
+    text-align: center;
+}
+
+.submitBtn {
+    background-color: #F4D424;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.submitBtn:hover {
+    background-color: #e2c021;
+    color: #fff;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .semiRegisterBg {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .phnvhContainer {
+        flex-direction: column;
+    }
+
+    .phoneField, .numberField {
+        width: 100%; /* Full width on small screens */
+    }
+}

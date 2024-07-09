@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@400;700&display=swap');
+
+body, html {
+    font-family: 'Smooch Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    text-align: center;
+}
+
+.mainNav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parkingLogo .myLogo {
+    margin-left: 10px;
+    height: 60px;
+    width: 60px;
+}
+
+.navItems {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin: 0 20px;
+}
+
+.navItems-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navItems-list li {
+    margin: 0 20px;
+    font-size: 22px;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navItems-list li:hover {
+    color: #F4D424;
+}
+
+.navItems-list .serviceTag {
+    position: relative;
+}
+
+.navItems-list .serviceTag:hover .dropdown-menu {
+    display: block;
+}
+
+.navLogSign {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.profileLogo {
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.navLogIn {
+    color: #F4D424;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #F4D424;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navRegister {
+    color: #F4D424;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 25px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #F4D424;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navLogIn:hover,y
+.navRegister:hover {
+    background-color: #F4D424;
+    color: #282c34;
+}
+
+.reserveContainer {
+    margin-top: 50px;
+    padding: 10px;
+    width: 100vw; /* Ensure it takes full width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    display: flex; /* Use flex to center content if needed */
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    flex-direction: column;
+    background-size: contain;
+    background-image: url("/src/assets/firstPage.png");
+}
+
+.customerContainer {
+    margin-top: 50px;
+    padding: 10px;
+    width: 100vw; /* Ensure it takes full width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-image: url("/src/assets/registerBg.png");
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .mainNav {
+        flex-wrap: wrap; /* Allow wrapping of nav items */
+    }
+
+    .navItems {
+        margin: 10px 0; /* Adjust margin for smaller screens */
+        width: 100%; /* Make nav items take full width */
+        justify-content: space-around; /* Distribute space evenly */
+    }
+
+    .navItems-list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .navItems-list li {
+        margin: 10px 0; /* Add margin for stacked items */
+    }
+
+    .navLogSign {
+        width: 100%; /* Ensure it takes full width */
+        justify-content: center; /* Center the sign in and register buttons */
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    .reserveContainer {
+        margin-top: 150px; /* Increase top margin if needed for the nav */
+    }
+
+
+}

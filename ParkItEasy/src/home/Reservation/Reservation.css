@@ -1,0 +1,98 @@
+.mainBg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.semiBg {
+    background: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+
+.heading1, .heading2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.locationField, .vehicleField, .grid {
+    margin-bottom: 20px;
+}
+
+.locationField label, .vehicleField label, .dateField label, .timeField label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 600;
+}
+
+.locationField select, .vehicleField select, .datePicker, .timePicker {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.applyBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f4d424;
+    color: #282c34;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.applyBtn:hover {
+    background-color: #e2c021;
+}
+
+.dateField, .timeField{
+    position: relative;
+
+}
+
+.dateField label, .timeField label{
+   color: white;
+}
+
+.dateField input, .timeField input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dateField input, .timeField input {
+        width: calc(100% - 30px);
+    }
+}
