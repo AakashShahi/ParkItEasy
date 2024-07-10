@@ -1,0 +1,76 @@
+.foot-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-top: 1px solid #ccc; /* Optional: for a subtle border */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Adjust the height as needed */
+}
+
+.foot_logo_area {
+    flex: 1;
+    text-align: left;
+}
+
+.foot_logo_area img {
+    height: 40px; /* Adjust as needed */
+}
+
+.foot_text_area {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: black; /* Set text color to black */
+}
+
+.foot_link_area {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.foot_link_area a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #000; /* Default link color */
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.foot_link_area a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Height of the underline */
+    background-color: #F4D424; /* Underline color */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.foot_link_area a:hover {
+    color: #F4D424; /* Change link color on hover */
+}
+
+.foot_link_area a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.foot_link_area img {
+    height: 25px; /* Adjust as needed */
+    width: auto;
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+.foot_link_area a:hover img {
+    transform: scale(0.8); /* Zoom out effect */
+}

@@ -3,6 +3,7 @@ import ReservationForm from './Reservation/Form.tsx';
 import './Home.css';
 import CustomerSignUp from "./CustomerRegistration/Form.tsx";
 import Service from "./OurSercive";
+import FootArea from "./DownBar";
 
 function Home() {
     const customerContainerRef = useRef(null);
@@ -47,6 +48,10 @@ function Home() {
             <div className="serviceContainer">
                 <Service />
             </div>
+
+            <footer className="footerContainer">
+                <FootArea/>
+            </footer>
         </>
     );
 }

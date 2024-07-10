@@ -68,6 +68,11 @@ body, html {
     outline: none;
 }
 
+.registrationForm input:hover {
+    border-color: #F4D424; /* Change border color on hover */
+    transform: translateY(-2px); /* Move input field slightly up on hover */
+}
+
 .registrationForm input::placeholder {
     color: #999; /* Placeholder color */
 }
@@ -107,6 +112,7 @@ body, html {
 .submitBtn:hover {
     background-color: #e2c021;
     color: #fff;
+    transform: scale(1.05); /* Scale up effect on hover */
 }
 
 /* Media query for smaller screens */
