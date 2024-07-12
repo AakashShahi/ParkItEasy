@@ -1,0 +1,186 @@
+/* Background container */
+.backgroundContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    width: 100vw; /* Full screen width */
+    padding: 20px;
+    background-image: url("src/assets/registerBg.png");
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Form container */
+.formContainer {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+/* Form title */
+.formTitle {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.highlightText {
+    color: #F4D424; /* Yellow color for emphasis */
+}
+
+/* Form fields */
+.formFields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced gap between fields */
+}
+
+.inputField {
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
+    border: 1px solid white;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    outline: none;
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inputField::placeholder {
+    color: #999;
+}
+
+/* Hover effect for input fields */
+.inputField:hover {
+    border-color: #F4D424;
+    box-shadow: 0 0 10px rgba(244, 212, 36, 0.5);
+}
+
+/* Form actions */
+.formActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Sign-In link */
+.signInLink {
+    color: #F4D424;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold; /* Bold text */
+    font-size: 18px; /* Slightly larger text */
+}
+
+.signInLink:hover {
+    color: #e2c021;
+}
+
+/* Submit button */
+.submitButton {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Make the button a block element */
+}
+
+.submitButton:hover {
+    background-color: #e2c021;
+    transform: scale(1.05);
+}
+
+/* Modal container */
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    backdrop-filter: blur(5px); /* Apply blur filter */
+}
+
+.modalContent {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    background-size: cover;
+}
+
+.closeModalButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 40px; /* Increased font size */
+    cursor: pointer;
+    color: #F4D424; /* More visible color */
+    font-weight: bold;
+}
+
+.modalInputField {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: transparent;
+}
+
+.modalInputField:hover {
+    border-color: #F4D424;
+    box-shadow: 0 0 10px rgba(244, 212, 36, 0.5);
+}
+
+.modalSubmitButton {
+    background-color: #F4D424; /* Yellow color */
+    color: #000000; /* White text */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.modalSubmitButton:hover {
+    background-color: #e2c021;
+    color: white;
+    transform: scale(1.05);
+}

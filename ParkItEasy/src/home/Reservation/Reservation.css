@@ -68,6 +68,7 @@
 .applyBtn:hover {
     background-color: #e2c021;
     color: white;
+
     transform: scale(1.05); /* Scale up slightly on hover */
 }
 
@@ -91,7 +92,8 @@
 
 .dateField input:hover,
 .timeField input:hover {
-    border-color: #f4d424; /* Change border color on hover */
+    border-color: #F4D424;
+    box-shadow: 0 0 10px rgba(244, 212, 36, 0.5);
 }
 
 @media (min-width: 768px) {

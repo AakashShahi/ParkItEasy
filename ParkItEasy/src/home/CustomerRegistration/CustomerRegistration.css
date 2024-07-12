@@ -69,7 +69,8 @@ body, html {
 }
 
 .registrationForm input:hover {
-    border-color: #F4D424; /* Change border color on hover */
+    border-color: #F4D424;
+    box-shadow: 0 0 10px rgba(244, 212, 36, 0.5); /* Change border color on hover */
     transform: translateY(-2px); /* Move input field slightly up on hover */
 }
 
