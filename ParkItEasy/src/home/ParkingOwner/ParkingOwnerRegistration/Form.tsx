@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './ParkingOwner.css';
+import { useNavigate } from 'react-router-dom';
 
 function OwnerRegistration() {
+    const navigate = useNavigate();
     const [showModal, setShowModal] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
 
@@ -11,6 +13,11 @@ function OwnerRegistration() {
 
     const togglePassword = () => {
         setShowPassword(!showPassword);
+    };
+
+    const navigateToDashboard = (event) => {
+        event.preventDefault();
+        navigate('/parking_dashboard');
     };
 
     return (
@@ -62,7 +69,7 @@ function OwnerRegistration() {
                             <input type="checkbox" id="togglePassword" onChange={togglePassword} />
                             <label htmlFor="togglePassword">Show Password</label>
                         </div>
-                        <button className="modalSubmitButton">Login</button>
+                        <button className="modalSubmitButton" onClick={navigateToDashboard}>Login</button>
                     </div>
                 </div>
             )}

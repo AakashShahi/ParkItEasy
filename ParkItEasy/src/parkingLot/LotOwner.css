@@ -1,0 +1,280 @@
+/* Container */
+.container {
+    display: flex;
+    min-height: 100vh; /* Ensure at least full viewport height */
+    width: 100vw;
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: black;
+    color: white;
+    width: 20%; /* Fixed width for the sidebar */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Remove overflow-y to prevent sidebar from scrolling */
+    position: fixed; /* Fixed positioning for sidebar */
+    top: 0; /* Align sidebar to top */
+    bottom: 0; /* Extend sidebar to bottom of viewport */
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 2rem; /* Reduced margin for responsiveness */
+}
+
+.ParkLogo {
+    width: 80%; /* Keep the logo responsive */
+    max-width: 100px; /* Adjust max-width as needed */
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Reduced gap between nav items */
+    width: 100%;
+}
+
+.nav-item {
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    width: 100%; /* Take full width of sidebar */
+}
+
+.nav-item img {
+    width: 20px; /* Adjusted width of the icons for smaller screens */
+    height: 20px; /* Adjusted height of the icons for smaller screens */
+    margin-right: 0.25rem; /* Reduced spacing between icon and text */
+}
+
+.nav-item:hover {
+    background-color: #e2c021;
+    transform: scale(1.03); /* Slight scale on hover for smaller screens */
+    color: white; /* Change text color to white on hover */
+}
+
+.nav-item:hover img {
+    filter: brightness(0) invert(1); /* Change image color to white on hover */
+}
+
+.logout-button {
+    background-color: #e60000;
+    color: white;
+    margin-top: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    width: 100%; /* Take full width of sidebar */
+}
+
+.logout-button:hover {
+    background-color: #cc0000;
+    transform: scale(1.03); /* Slight scale on hover for smaller screens */
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto; /* Enable vertical scrolling for main content */
+    margin-left: 25%; /* Ensure main content area doesn't overlap with sidebar */
+}
+
+.main-title {
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
+    font-weight: lighter;
+    margin-bottom: 1.5rem; /* Reduced margin for responsiveness */
+    color: black;
+    margin-top: 0px;
+    align-self: flex-start;
+}
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap; /* Ensure cards wrap to new line on smaller screens */
+    gap: 1.5rem; /* Reduced gap between cards */
+    margin-top: 1.5rem; /* Adjusted margin for smaller screens */
+    justify-content: center; /* Center stat cards horizontally */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.stat-card {
+    width: 200px; /* Ensure consistent width for stat cards */
+    height: 150px; /* Reduced height for cards on smaller screens */
+    background-color: #6e6e6e;
+    color: white;
+    padding: 1.5rem; /* Adjusted padding for smaller screens */
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-card img {
+    width: 36px; /* Adjusted icon size for smaller screens */
+    height: 36px; /* Adjusted icon size for smaller screens */
+}
+
+.stat-title {
+    margin-top: 0.75rem; /* Adjusted spacing for smaller screens */
+    font-size: 1rem; /* Adjusted font size for smaller screens */
+}
+
+.stat-value {
+    font-size: 1.75rem; /* Adjusted font size for smaller screens */
+    font-weight: bold;
+    margin-top: 0.25rem; /* Adjusted spacing for smaller screens */
+}
+
+.stat-card:hover {
+    transform: scale(1.05); /* Slight increase in scale on hover */
+}
+
+.table-container {
+    width: 100%;
+    margin-top: 2rem;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0; /* Light gray border bottom */
+}
+
+.table th {
+    background-color: #f0f0f0; /* Light gray background for header */
+    color: #333333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table td {
+    color: #666666;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row background color */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack sidebar on top of main content */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for sidebar on smaller screens */
+        max-height: none; /* Reset max-height to allow full sidebar content */
+        position: relative; /* Revert to normal flow */
+        padding: 1rem; /* Adjusted padding for smaller screens */
+        margin-bottom: 1rem; /* Adjusted margin for smaller screens */
+    }
+
+    .ParkLogo {
+        max-width: 80px; /* Adjust max-width for smaller screens */
+        margin-bottom: 1rem; /* Reduced margin for responsiveness */
+    }
+
+    .nav {
+        flex-direction: column; /* Stack navigation items vertically */
+        gap: 1rem; /* Reduced gap between nav items */
+    }
+
+    .nav-item {
+        width: auto; /* Allow items to take content width */
+        padding: 1rem 2rem; /* Adjusted padding for buttons */
+        text-align: center; /* Center align text */
+    }
+
+    .logout-button {
+        padding: 1rem 2rem; /* Adjusted padding for logout button */
+    }
+
+    .nav-item:hover {
+        background-color: #e2c021;
+        transform: scale(1.03); /* Slight scale on hover for smaller screens */
+        color: white; /* Change text color to white on hover */
+    }
+
+    .nav-item:hover img {
+        filter: brightness(0) invert(1); /* Change image color to white on hover */
+    }
+
+    .main-content {
+        margin-left: 0; /* Reset margin for main content on smaller screens */
+    }
+
+    .main-title {
+        font-size: 1.25rem; /* Adjusted font size for smaller screens */
+        margin-bottom: 1rem; /* Reduced margin for responsiveness */
+    }
+
+    .stats-grid {
+        gap: 1rem; /* Further reduced gap between cards for smaller screens */
+        margin-top: 1rem; /* Adjusted margin for smaller screens */
+    }
+
+    .stat-card {
+        height: 120px; /* Further reduced height for smaller screens */
+        padding: 1rem; /* Further reduced padding for smaller screens */
+    }
+
+    .stat-card img {
+        width: 32px; /* Further adjusted icon size for smaller screens */
+        height: 32px; /* Further adjusted icon size for smaller screens */
+    }
+
+    .stat-title {
+        font-size: 0.85rem; /* Further reduced font size for smaller screens */
+        margin-top: 0.5rem; /* Adjusted spacing for smaller screens */
+    }
+
+    .stat-value {
+        font-size: 1.5rem; /* Adjusted font size for smaller screens */
+        margin-top: 0.15rem; /* Adjusted spacing for smaller screens */
+    }
+
+    .stat-card:hover {
+        transform: scale(1.05); /* Slight increase in scale on hover */
+    }
+
+    .table {
+        overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    }
+
+    .table th,
+    .table td {
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+}
