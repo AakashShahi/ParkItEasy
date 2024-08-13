@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ReservationForm from './Reservation/Form.tsx';
 import './Home.css';
@@ -7,6 +7,8 @@ import Service from "./OurSercive";
 import FootArea from "./DownBar";
 
 function Home() {
+    const [showLoginForm, setShowLoginForm] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
     const customerContainerRef = useRef(null);
     const serviceContainerRef = useRef(null);
@@ -32,6 +34,15 @@ function Home() {
         navigate('/parking_owner');
     };
 
+    const toggleLoginForm = (event) => {
+        event.preventDefault();
+        setShowLoginForm(!showLoginForm);
+    };
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+
     return (
         <>
             <header>
@@ -50,11 +61,32 @@ function Home() {
 
                     <div className="navLogSign">
                         <img className="profileLogo" src="src/assets/profileLogo.png" alt="Profile Logo" />
-                        <a className="navLogIn" href="/login">Log In</a>
+                        <a className="navLogIn" href="#" onClick={toggleLoginForm}>Log In</a>
                         <a className="navRegister" href="#register" onClick={scrollToCustomerContainer}>Sign Up</a>
                     </div>
                 </div>
             </header>
+
+            {showLoginForm && (
+                <div className="loginDropdown">
+                    <div className="closeButton" onClick={toggleLoginForm}>&times;</div>
+                    <form className="loginForm">
+                        <label>Email</label>
+                        <input type="email" placeholder="Enter your email" required />
+                        <label>Password</label>
+                        <input
+                            type={showPassword ? "text" : "password"}
+                            placeholder="Enter your password"
+                            required
+                        />
+                        <button type="button" className="togglePassword" onClick={togglePasswordVisibility}>
+                            {showPassword ? "Hide" : "Show"}
+                        </button>
+                        <button type="submit" className="loginButton">Log In</button>
+                        <a href="/forgot-password" className="forgotPasswordLink">Forgot Password?</a>
+                    </form>
+                </div>
+            )}
 
             <div className="reserveContainer" ref={reserveContainerRef}>
                 <ReservationForm />

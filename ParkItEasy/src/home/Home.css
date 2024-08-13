@@ -6,6 +6,7 @@ body, html {
     padding: 0;
     background: #000000;
     text-align: center;
+    overflow-x:hidden;
 }
 
 .mainNav {
@@ -118,7 +119,6 @@ body, html {
 }
 
 .customerContainer {
-    margin-top: 50px;
     padding: 10px;
     width: 100vw; /* Ensure it takes full width */
     box-sizing: border-box; /* Include padding in the width calculation */
@@ -133,7 +133,6 @@ body, html {
 
 
 .serviceContainer {
-    margin-top: 50px;
     padding: 10px;
     width: 100vw; /* Ensure it takes full width */
     box-sizing: border-box; /* Include padding in the width calculation */
@@ -145,6 +144,96 @@ body, html {
     background-image: url("/src/assets/thirdpage.png");
     background-repeat: no-repeat;
 }
+
+.loginDropdown {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 300px;
+    padding: 20px;
+    background-color: #101010;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loginDropdown .closeButton {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 30px;
+    color: #F4D424;
+    cursor: pointer;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+.loginForm label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.loginForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background-color: #333;
+    color: #ffffff;
+}
+
+.loginForm input::placeholder {
+    color: #ffffff;
+}
+
+.togglePassword {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: #F4D424;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.loginButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #F4D424;
+    color: #282c34;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.loginButton:hover {
+    background-color: #282c34;
+    color: #F4D424;
+}
+
+.forgotPasswordLink {
+    font-size: 14px;
+    color: #F4D424;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.forgotPasswordLink:hover {
+    text-decoration: underline;
+}
+
 
 @media (max-width: 768px) {
     .mainNav {

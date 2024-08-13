@@ -187,6 +187,88 @@
     background-color: #f9f9f9; /* Alternate row background color */
 }
 
+.Parking-title {
+    font-size: 2.5rem; /* Adjust font size as needed */
+    margin-bottom: 1rem; /* Margin for spacing */
+    color: #333; /* Dark text color */
+}
+
+/* Form Section */
+.form-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem; /* Margin for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Form Title */
+.form-title {
+    font-size: 1.2rem; /* Adjust font size as needed */
+    margin-bottom: 1rem; /* Margin for spacing */
+    color: #666; /* Subtle text color */
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem; /* Gap between grid items */
+    margin-bottom: 1.5rem; /* Margin for spacing */
+}
+
+/* Form Input */
+.form-input {
+    padding: 0.5rem; /* Padding for input */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 0.5rem; /* Rounded corners */
+    font-size: 1rem; /* Adjust font size as needed */
+    color: #333; /* Text color */
+    background-color: #f9f9f9; /* Background color */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for interactions */
+}
+
+/* Focus state for Form Input */
+.form-input:focus {
+    background-color: #fff; /* Background color on focus */
+    border-color: #e2c021; /* Border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.form-input:hover {
+    background-color: #fff; /* Background color on focus */
+    border-color: #e2c021; /* Border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Full width for spanning two columns */
+.span-2 {
+    grid-column: span 2;
+}
+
+/* Form Submit */
+.form-submit {
+    text-align: center;
+    margin-top: 1.5rem; /* Margin for spacing */
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: black; /* Button background color */
+    color: white; /* Button text color */
+    padding: 1rem 2rem; /* Padding for button */
+    border-radius: 0.5rem; /* Rounded corners */
+    font-size: 1rem; /* Adjust font size as needed */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for interactions */
+}
+
+/* Hover state for Submit Button */
+.submit-button:hover {
+    background-color: #e2c021; /* Background color on hover */
+    transform: scale(1.03); /* Slightly increase size on hover */
+}
+
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
     .container {
